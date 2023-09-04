@@ -1,39 +1,72 @@
---- 
+---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+  :root {
+    /* COLORS */
+    --color-primary-1: hsl(7, 99%, 70%);
+    --color-primary-2: hsl(51, 100%, 49%);
+    --color-primary-3: hsl(167, 40%, 24%);
+    --color-primary-4: hsl(198, 62%, 26%);
+    --color-primary-5: hsl(168, 34%, 41%);
+
+    --color-neutral-1: hsl(212, 27%, 19%);
+    --color-neutral-2: hsl(213, 9%, 39%);
+    --color-neutral-3: hsl(232, 10%, 55%);
+    --color-neutral-4: hsl(210, 4%, 67%);
+    --color-neutral-1: hsl(0, 0%, 100%);
+
+    /* TYPOGRAPHY */
+
+    --font-size: 18px;
+
+    --font-family-regular: "Barlow", sans-serif;
+    --font-family-accent: "Fraunces", serif;
+  }
+
+	* {
+		box-sizing: border-box;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151A;
-		background-size: 224px;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+
+  html,
+	body {
+    margin: 0;
+  }
+
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
 </style>
