@@ -1,117 +1,154 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Heading from '../layouts/Heading.astro';
+import Layout from "../layouts/Layout.astro";
+import Heading from "../layouts/Heading.astro";
 ---
 
 <Layout title="Sunnyside">
+  <Heading
+    backgroundDesktop="url('src/assets/img/desktop/image-header.jpg')"
+    backgroundMobile="url('src/assets/img/mobile/image-header.jpg')"
+  >
+    <div class="heading">
+      <h1>We are creatives</h1>
+      <div>
+        <img src="/icons/icon-arrow-down.svg" alt="" srcset="" />
+      </div>
+    </div>
+  </Heading>
 
-	<Heading background="url('src/assets/img/desktop/image-header.jpg')">
-		<div class="heading">
-			<h1>We are creatives</h1>
-			<div>
-				<img src="/icons/icon-arrow-down.svg" alt="" srcset="">
-			</div>
-		</div>
-	</Heading>
-	
-	<section>
-		<!-- Putting them as img tags for placeholder rn
+  <section>
+    <!-- Putting them as img tags for placeholder rn
 		Later these should be just divs with dynamically
 		set background property values
 		which could be done using custom properties -->
-		<div><img src="src/assets/img/desktop/image-transform.jpg" alt=""></div>
-		<div><h2>Transform your brand</h2>
-		<p>We are a full-service creative agency specializing in helping brands grow fast. 
-			Engage your clients through compelling visuals that do most of the marketing for you.</p>
-		<a href="/">Learn more</a></div>
-		<div><img src="src/assets/img/desktop/image-stand-out.jpg" alt=""></div>
-		<div><div><h2>Stand out to the right audience</h2>
-			<p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
-			<a href="/">Learn more</a></div></div>
-	</section>
-	
-	<section>
-		<div><h3>Graphic design</h3>
-		<p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p></div>
-		<div></div>
-		<div><h3>Photography</h3>
-			<p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p></div>
-			<div></div>
-	</section>
-		
-	<section>
-		<h3>Client testimonials</h3>
-		<div>
+    <div><img src="src/assets/img/desktop/image-transform.jpg" alt="" /></div>
+    <div>
+      <h2>Transform your brand</h2>
+      <p>
+        We are a full-service creative agency specializing in helping brands
+        grow fast. Engage your clients through compelling visuals that do most
+        of the marketing for you.
+      </p>
+      <a href="/">Learn more</a>
+    </div>
+    <div><img src="src/assets/img/desktop/image-stand-out.jpg" alt="" /></div>
+    <div>
+      <div>
+        <h2>Stand out to the right audience</h2>
+        <p>
+          Using a collaborative formula of designers, researchers,
+          photographers, videographers, and copywriters, we’ll build and extend
+          your brand in digital places.
+        </p>
+        <a href="/">Learn more</a>
+      </div>
+    </div>
+  </section>
 
-			<div>
-				<img src="/img/image-emily.jpg" alt="">
-				<p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-				<p>Emily R.</p>
-				<p>Marketing Director</p>
-			</div>
-			<div>
-				<img src="/img/image-thomas.jpg" alt="">
-				<p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
-				<p>Thomas S.</p>
-				<p>Chief Operating Officer</p>
-			</div>
-			<div>
-			<img src="/img/image-jennie.jpg" alt="">
-			<p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
-			<p>Jennie F.</p>
-			<p>Business Owner</p>
-		</div>
-	</div>
-	</section>
+  <section>
+    <div>
+      <h3>Graphic design</h3>
+      <p>
+        Great design makes you memorable. We deliver artwork that underscores
+        your brand message and captures potential clients’ attention.
+      </p>
+    </div>
+    <div></div>
+    <div>
+      <h3>Photography</h3>
+      <p>
+        Increase your credibility by getting the most stunning, high-quality
+        photos that improve your business image.
+      </p>
+    </div>
+    <div></div>
+  </section>
 
-	<section>
-		<div><img src="src/assets/img/desktop/image-gallery-milkbottles.jpg" alt=""></div>
-		<div><img src="src/assets/img/desktop/image-gallery-orange.jpg" alt=""></div>
-		<div><img src="src/assets/img/desktop/image-gallery-cone.jpg" alt=""></div>
-		<div><img src="src/assets/img/desktop/image-gallery-sugarcubes.jpg" alt=""></div>
-	</section>
+  <section>
+    <h3>Client testimonials</h3>
+    <div>
+      <div>
+        <img src="/img/image-emily.jpg" alt="" />
+        <p>
+          We put our trust in Sunnyside and they delivered, making sure our
+          needs were met and deadlines were always hit.
+        </p>
+        <p>Emily R.</p>
+        <p>Marketing Director</p>
+      </div>
+      <div>
+        <img src="/img/image-thomas.jpg" alt="" />
+        <p>
+          Sunnyside’s enthusiasm coupled with their keen interest in our brand’s
+          success made it a satisfying and enjoyable experience.
+        </p>
+        <p>Thomas S.</p>
+        <p>Chief Operating Officer</p>
+      </div>
+      <div>
+        <img src="/img/image-jennie.jpg" alt="" />
+        <p>
+          Incredible end result! Our sales increased over 400% when we worked
+          with Sunnyside. Highly recommended!
+        </p>
+        <p>Jennie F.</p>
+        <p>Business Owner</p>
+      </div>
+    </div>
+  </section>
 
-	<footer>
-		<div><img src="/logo.svg" alt=""></div>
-		<ul>
-			<li><a href="">About</a></li>
-			<li><a href="">Services</a></li>
-			<li><a href="">Projects</a></li>
-		</ul>
-		<ul>
-			<li><a href=""><img src="/icons/icon-facebook.svg" alt=""></a></li>
-		</ul>
-		<ul>
-			<li><a href=""><img src="/icons/icon-instagram.svg" alt=""></a></li>
-		</ul>
-		<ul>
-			<li><a href=""><img src="/icons/icon-twitter.svg" alt=""></a></li>
-		</ul>
-		<ul>
-			<li><a href=""><img src="/icons/icon-pinterest.svg" alt=""></a></li>
-		</ul>
-	</footer>
+  <section>
+    <div>
+      <img src="src/assets/img/desktop/image-gallery-milkbottles.jpg" alt="" />
+    </div>
+    <div>
+      <img src="src/assets/img/desktop/image-gallery-orange.jpg" alt="" />
+    </div>
+    <div>
+      <img src="src/assets/img/desktop/image-gallery-cone.jpg" alt="" />
+    </div>
+    <div>
+      <img src="src/assets/img/desktop/image-gallery-sugarcubes.jpg" alt="" />
+    </div>
+  </section>
 
-	
+  <footer>
+    <div><img src="/logo.svg" alt="" /></div>
+    <ul>
+      <li><a href="">About</a></li>
+      <li><a href="">Services</a></li>
+      <li><a href="">Projects</a></li>
+    </ul>
+    <ul>
+      <li><a href=""><img src="/icons/icon-facebook.svg" alt="" /></a></li>
+    </ul>
+    <ul>
+      <li><a href=""><img src="/icons/icon-instagram.svg" alt="" /></a></li>
+    </ul>
+    <ul>
+      <li><a href=""><img src="/icons/icon-twitter.svg" alt="" /></a></li>
+    </ul>
+    <ul>
+      <li><a href=""><img src="/icons/icon-pinterest.svg" alt="" /></a></li>
+    </ul>
+  </footer>
 </Layout>
 
 <style>
+  .heading {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+  }
 
-	.heading {
-		display: grid;
-		grid-template-rows: repeat(3, 1fr);
-		justify-content: center;
-		justify-items: center;
-	}
-	
-	h1 {
-		color: var(--color-neutral-5);
-		font-family: "Fraunces", serif;
-		font-weight: 900;
-		text-transform: uppercase;
-		font-size: clamp(1rem, 5vw, 5rem);
-		letter-spacing: .6rem;
-		align-self: center;
-	}
-	
+  h1 {
+    color: var(--color-neutral-5);
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 5vw, 5rem);
+    letter-spacing: 0.6rem;
+    align-self: center;
+  }
 </style>
