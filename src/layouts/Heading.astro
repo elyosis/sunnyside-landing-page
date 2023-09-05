@@ -1,0 +1,25 @@
+---
+import Header from "../components/Header.astro";
+
+const { background } = Astro.props;
+---
+
+<section data-bg={background}>
+  <Header />
+  <slot />
+</section>
+<script>
+  const section = document.querySelector("section");
+  section.style.setProperty("--heading-background", section.dataset.bg);
+</script>
+<style>
+  section {
+    --heading-background: black;
+    display: grid;
+    grid-template-rows: minmax(min-content, auto) 1fr;
+    background: var(--heading-background);
+    background-size: cover;
+    background-position: 0%;
+    aspect-ratio: 16/9;
+  }
+</style>

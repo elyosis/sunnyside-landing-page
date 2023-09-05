@@ -1,27 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Heading from '../layouts/Heading.astro';
 ---
 
 <Layout title="Sunnyside">
 
-	<section>
-		<header>
-			<a href="/"><img src="/logo.svg" alt="Sunnyside brand logo"></a>
-		<nav>
-			<ul>
-				<li><a href="">About</a></li>
-				<li><a href="">Services</a></li>
-				<li><a href="">Projects</a></li>
-				<button><a href="">Contact</a></button>
-			</ul>
-		</nav>
-	</header>
-	<div>
-
-		<h1>We are creatives</h1>
-		<img src="/icons/icon-arrow-down.svg" alt="" srcset="">
-	</div>
-	</section>
+	<Heading background="url('src/assets/img/desktop/image-header.jpg')">
+		<div class="heading">
+			<h1>We are creatives</h1>
+			<div>
+				<img src="/icons/icon-arrow-down.svg" alt="" srcset="">
+			</div>
+		</div>
+	</Heading>
 	
 	<section>
 		<!-- Putting them as img tags for placeholder rn
@@ -105,6 +96,22 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+
+	.heading {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		justify-content: center;
+		justify-items: center;
+	}
 	
+	h1 {
+		color: var(--color-neutral-5);
+		font-family: "Fraunces", serif;
+		font-weight: 900;
+		text-transform: uppercase;
+		font-size: clamp(1rem, 5vw, 5rem);
+		letter-spacing: .6rem;
+		align-self: center;
+	}
 	
 </style>
