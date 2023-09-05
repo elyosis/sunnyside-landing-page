@@ -1,0 +1,18 @@
+{
+  "0" :{
+    "bg": {
+      "mobile": "url('src/assets/img/mobile/image-graphic-design.jpg')",
+      "desktop": "url('src/assets/img/desktop/image-graphic-design.jpg')"
+    },
+    "heading": "Graphic Design",
+    "copy": "Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention."
+  },
+  "1":{
+    "bg": {
+      "mobile": "url('src/assets/img/mobile/image-photography.jpg')",
+      "desktop": "url('src/assets/img/desktop/image-photography.jpg')"
+    },
+    "heading": "Photography",
+    "copy": "Increase your credibility by getting the most stunning, high-quality photos that improve your business image."
+  }
+}

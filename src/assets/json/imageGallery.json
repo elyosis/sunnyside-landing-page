@@ -1,0 +1,18 @@
+{
+  "0": {
+    "mobile": "src/assets/img/mobile/image-gallery-milkbottles.jpg",
+    "desktop": "src/assets/img/desktop/image-gallery-milkbottles.jpg"
+  },
+  "1": {
+    "mobile": "src/assets/img/mobile/image-gallery-orange.jpg",
+    "desktop": "src/assets/img/desktop/image-gallery-orange.jpg"
+  },
+  "2": {
+    "mobile": "src/assets/img/mobile/image-gallery-cone.jpg",
+    "desktop": "src/assets/img/desktop/image-gallery-cone.jpg"
+  },
+  "3": {
+    "mobile": "src/assets/img/mobile/image-gallery-sugar-cubes.jpg",
+    "desktop": "src/assets/img/desktop/image-gallery-sugarcubes.jpg"
+  }
+}
