@@ -1,0 +1,60 @@
+---
+---
+
+<header>
+  <a href="/"><img src="/logo.svg" alt="Sunnyside brand logo"></a>
+<nav>
+  <ul>
+    <li><a href="">About</a></li>
+    <li><a href="">Services</a></li>
+    <li><a href="">Projects</a></li>
+    <button><a href="">Contact</a></button>
+  </ul>
+</nav>
+</header>
+
+<style>
+  header {
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  img {
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  li > a,
+  button > a  {
+    text-decoration: none;
+    color: var(--color-neutral-5);
+  }
+
+  li > a {
+    font-family: "Barlow", sans-serif;
+  }
+
+  button {
+   background-color: var(--color-neutral-5);
+   padding: 1rem 1.75rem;
+   border: none;
+   border-radius: 25px;
+  }
+
+  button > a {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    color: var(--color-neutral-1);
+    text-transform: uppercase;
+  }
+</style>
