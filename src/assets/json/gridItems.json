@@ -1,20 +1,22 @@
-{
-  "0" :{
+[
+  {
     "bg": {
-      "mobile": "url('src/assets/img/mobile/image-transform.jpg')",
-      "desktop": "url('src/assets/img/desktop/image-transform.jpg')"
+      "mobile": "src/assets/img/mobile/image-transform.jpg",
+      "desktop": "src/assets/img/desktop/image-transform.jpg"
     },
     "heading": "Transform your brand",
     "copy": "We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.",
-    "link": "Learn more"
+    "link": "Learn more",
+    "id": "transform"
   },
-  "1":{
+  {
     "bg": {
-      "mobile": "url('src/assets/img/mobile/image-stand-out.jpg')",
-      "desktop": "url('src/assets/img/desktop/image-stand-out.jpg')"
+      "mobile": "src/assets/img/mobile/image-stand-out.jpg",
+      "desktop": "src/assets/img/desktop/image-stand-out.jpg"
     },
     "heading": "Stand out to the right audience",
     "copy": "Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.",
-    "link": "Learn more"
+    "link": "Learn more",
+    "id": "standout"
   }
-}
+]

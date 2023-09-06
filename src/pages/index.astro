@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Heading from "../layouts/Heading.astro";
+import PitchGrid from "../components/PitchGrid.astro";
 ---
 
 <Layout title="Sunnyside">
@@ -17,32 +18,7 @@ import Heading from "../layouts/Heading.astro";
   </Heading>
 
   <section>
-    <!-- Putting them as img tags for placeholder rn
-		Later these should be just divs with dynamically
-		set background property values
-		which could be done using custom properties -->
-    <div><img src="src/assets/img/desktop/image-transform.jpg" alt="" /></div>
-    <div>
-      <h2>Transform your brand</h2>
-      <p>
-        We are a full-service creative agency specializing in helping brands
-        grow fast. Engage your clients through compelling visuals that do most
-        of the marketing for you.
-      </p>
-      <a href="/">Learn more</a>
-    </div>
-    <div><img src="src/assets/img/desktop/image-stand-out.jpg" alt="" /></div>
-    <div>
-      <div>
-        <h2>Stand out to the right audience</h2>
-        <p>
-          Using a collaborative formula of designers, researchers,
-          photographers, videographers, and copywriters, we’ll build and extend
-          your brand in digital places.
-        </p>
-        <a href="/">Learn more</a>
-      </div>
-    </div>
+    <PitchGrid />
   </section>
 
   <section>
