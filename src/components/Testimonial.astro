@@ -1,0 +1,50 @@
+---
+const { image, quote, authorName, authorTitle } = Astro.props;
+---
+
+<div class="testimonial">
+  <img class="testimonial__img" src={image} alt="" />
+  <p class="testimonial__quote">
+    {quote}
+  </p>
+  <p class="testimonial__authorName">{authorName}</p>
+  <p class="testimonial__authorTitle">{authorTitle}</p>
+</div>
+
+<style>
+  .testimonial {
+    text-align: center;
+  }
+
+  .testimonial__img {
+    width: 4.5rem;
+    border-radius: 100%;
+  }
+
+  .testimonial__quote,
+  .testimonial__authorTitle {
+    font-family: "Barlow", sans-serif;
+  }
+
+  .testimonial__quote {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: -0.05cap;
+    color: var(--color-neutral-2);
+    max-width: 325px;
+    margin-block: 3rem 4rem;
+  }
+
+  .testimonial__authorName {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    color: var(--color-neutral-1);
+    margin-bottom: 0.7rem;
+  }
+
+  .testimonial__authorTitle {
+    font-size: 0.9rem;
+    color: var(--color-neutral-4);
+    margin-top: 0.5rem;
+  }
+</style>

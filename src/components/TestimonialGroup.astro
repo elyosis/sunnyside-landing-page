@@ -1,0 +1,37 @@
+---
+import testimonials from "../assets/data/testimonials.json";
+import Testimonial from "./Testimonial.astro";
+---
+
+<h3>Client testimonials</h3>
+<div class="testimonials">
+  {
+    testimonials.map((item) => (
+      <Testimonial
+        image={item.img}
+        quote={item.quote}
+        authorName={item.authorName}
+        authorTitle={item.authorTitle}
+      />
+    ))
+  }
+</div>
+
+<style>
+  h3 {
+    text-align: center;
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--color-neutral-4);
+    margin-bottom: 5rem;
+  }
+  
+  .testimonials {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+</style>
