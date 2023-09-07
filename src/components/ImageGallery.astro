@@ -1,0 +1,27 @@
+---
+import imgGalleryData from "../assets/data/imageGallery.json";
+---
+
+<div class="gallery">
+  {
+    imgGalleryData.map((item) => (
+      <div>
+        <picture>
+          <source media="(max-width: 500px)" srcset={item.mobile} sizes="" />
+          <img class="gallery__img" src={item.desktop} alt="" />
+        </picture>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery__img {
+    width: 100%;
+  }
+</style>

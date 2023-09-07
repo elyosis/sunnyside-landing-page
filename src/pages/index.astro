@@ -3,11 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Heading from "../layouts/Heading.astro";
 import Card from "../components/Card.astro";
 import BackgroundCard from "../components/BackgroundCard.astro";
+import TestimonialGroup from "../components/TestimonialGroup.astro";
+import ImageGallery from "../components/ImageGallery.astro";
 
 
 import cardData from "../assets/data/cardItems.json";
 import bgCardData from "../assets/data/bgCardItems.json";
-import TestimonialGroup from "../components/TestimonialGroup.astro";
 ---
 
 <Layout title="Sunnyside">
@@ -57,19 +58,9 @@ import TestimonialGroup from "../components/TestimonialGroup.astro";
   </section>
 
   <section>
-    <div>
-      <img src="src/assets/img/desktop/image-gallery-milkbottles.jpg" alt="" />
-    </div>
-    <div>
-      <img src="src/assets/img/desktop/image-gallery-orange.jpg" alt="" />
-    </div>
-    <div>
-      <img src="src/assets/img/desktop/image-gallery-cone.jpg" alt="" />
-    </div>
-    <div>
-      <img src="src/assets/img/desktop/image-gallery-sugarcubes.jpg" alt="" />
-    </div>
+    <ImageGallery />
   </section>
+
 
   <footer>
     <div><img src="/logo.svg" alt="" /></div>
