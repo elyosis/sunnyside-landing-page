@@ -1,18 +1,20 @@
 [
   {
     "bg": {
-      "mobile": "url('src/assets/img/mobile/image-graphic-design.jpg')",
-      "desktop": "url('src/assets/img/desktop/image-graphic-design.jpg')"
+      "mobile": "src/assets/img/mobile/image-graphic-design.jpg",
+      "desktop": "src/assets/img/desktop/image-graphic-design.jpg"
     },
     "heading": "Graphic Design",
-    "copy": "Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention."
+    "copy": "Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention.",
+    "fontColor": "var(--color-primary-3)"
   },
   {
     "bg": {
-      "mobile": "url('src/assets/img/mobile/image-photography.jpg')",
-      "desktop": "url('src/assets/img/desktop/image-photography.jpg')"
+      "mobile": "src/assets/img/mobile/image-photography.jpg",
+      "desktop": "src/assets/img/desktop/image-photography.jpg"
     },
     "heading": "Photography",
-    "copy": "Increase your credibility by getting the most stunning, high-quality photos that improve your business image."
+    "copy": "Increase your credibility by getting the most stunning, high-quality photos that improve your business image.",
+    "fontColor": "var(--color-primary-4)"
   }
 ]

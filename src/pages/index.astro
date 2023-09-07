@@ -2,9 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import Heading from "../layouts/Heading.astro";
 import Card from "../components/Card.astro";
+import BackgroundCard from "../components/BackgroundCard.astro";
 
 
 import cardData from "../assets/data/cardItems.json";
+import bgCardData from "../assets/data/bgCardItems.json";
 ---
 
 <Layout title="Sunnyside">
@@ -35,23 +37,18 @@ import cardData from "../assets/data/cardItems.json";
     }
   </section>
 
-  <section>
-    <div>
-      <h3>Graphic design</h3>
-      <p>
-        Great design makes you memorable. We deliver artwork that underscores
-        your brand message and captures potential clients’ attention.
-      </p>
-    </div>
-    <div></div>
-    <div>
-      <h3>Photography</h3>
-      <p>
-        Increase your credibility by getting the most stunning, high-quality
-        photos that improve your business image.
-      </p>
-    </div>
-    <div></div>
+  <section class="bg-cards">
+    {
+      bgCardData.map((item) => (
+        <BackgroundCard
+          backgroundDesktop={item.bg.desktop}
+          backgroundMobile={item.bg.mobile}
+          heading={item.heading}
+          copy={item.copy}
+          fontColor={item.fontColor}
+        />
+      ))
+    }
   </section>
 
   <section>
@@ -140,5 +137,10 @@ import cardData from "../assets/data/cardItems.json";
     font-size: clamp(1rem, 5vw, 5rem);
     letter-spacing: 0.6rem;
     align-self: center;
+  }
+
+  .bg-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 </style>
