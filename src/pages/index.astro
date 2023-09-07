@@ -1,7 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Heading from "../layouts/Heading.astro";
-import PitchGrid from "../components/PitchGrid.astro";
+import Card from "../components/Card.astro";
+
+
+import cardData from "../assets/data/cardItems.json";
 ---
 
 <Layout title="Sunnyside">
@@ -18,7 +21,18 @@ import PitchGrid from "../components/PitchGrid.astro";
   </Heading>
 
   <section>
-    <PitchGrid />
+    {
+      cardData.map((item) => (
+        <Card
+          backgroundDesktop={item.bg.desktop}
+          backgroundMobile={item.bg.mobile}
+          heading={item.heading}
+          copy={item.copy}
+          link={item.link}
+          id={item.id}
+        />
+      ))
+    }
   </section>
 
   <section>
