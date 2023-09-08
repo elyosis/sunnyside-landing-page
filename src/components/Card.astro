@@ -4,11 +4,15 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
 ---
 
 <div class="card" id={id}>
-
   <div class="card__img-container">
     <picture>
-      <source media="(max-width: 500px)" srcset={backgroundMobile} sizes="" />
-      <img class="card__img" class="gallery__img" src={backgroundDesktop} alt="" />
+      <source media="(max-width: 835px)" srcset={backgroundMobile} sizes="" />
+      <img
+        class="card__img"
+        class="gallery__img"
+        src={backgroundDesktop}
+        alt=""
+      />
     </picture>
   </div>
   <div class="card__text">
@@ -36,12 +40,13 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
 
   .card__img {
     display: block;
+    height: 100%;
     width: 100%;
     object-position: 0%;
   }
-  
+
   .card__text {
-    padding-inline: 7rem;
+    padding-inline: clamp(1.5rem, 9vw, 7rem);
     align-self: center;
   }
 
@@ -52,7 +57,7 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
   }
 
   .card__heading {
-    font-size: clamp(2rem, 3vw, 4rem);
+    font-size: clamp(1.5rem, 3vw, 4rem);
     font-weight: 900;
     margin-block: 0;
   }
@@ -61,7 +66,7 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
     font-family: "Barlow", sans-serif;
     color: var(--color-neutral-3);
     line-height: 1.5;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
     margin-block: 2rem;
   }
 
@@ -90,11 +95,43 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
     opacity: 1;
   }
 
-  #transform .card__link::after  {
+  #transform .card__link::after {
     background: var(--color-primary-2);
   }
 
   #standout .card__link::after {
     background: var(--color-primary-1);
+  }
+
+  @media (max-width: 835px) {
+    .card__text {
+      padding-inline: 1rem;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 675px) {
+    .card {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+    }
+
+    .card__text {
+      padding-block: 4rem;
+    }
+
+    #transform .card__text,
+    #transform .card__img-container {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
+    .card__heading {
+      font-size: 2rem;
+    }
+
+    .card__copy {
+      font-size: 1.1rem;
+    }
   }
 </style>
