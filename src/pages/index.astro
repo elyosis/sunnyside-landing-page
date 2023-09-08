@@ -89,4 +89,11 @@ import bgCardData from "../assets/data/bgCardItems.json";
   .section--testimonial {
     padding-block: 8rem;
   }
+
+  @media (max-width: 675px) {
+    .section--bg-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  }
 </style>

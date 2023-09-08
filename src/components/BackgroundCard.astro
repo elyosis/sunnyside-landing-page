@@ -4,21 +4,28 @@ const { backgroundMobile, backgroundDesktop, heading, copy, fontColor } =
 ---
 
 <div class="bg-card">
-  <img src={backgroundDesktop} alt="" srcset="" />
-  <img src={backgroundMobile} alt="" srcset="" />
+  <picture class="bg-card__img-container">
+    <source media="(max-width: 835px)" srcset={backgroundMobile} sizes="" />
+    <img class="bg-card__img" src={backgroundDesktop} alt="" />
+  </picture>
   <div class="bg-card__text">
-    <h4>{heading}</h4>
-    <p>{copy}</p>
+    <h4 class="bg-card__heading">{heading}</h4>
+    <p class="bg-card__copy">{copy}</p>
   </div>
 </div>
 
 <style define:vars={{ backgroundMobile, backgroundDesktop, fontColor }}>
   .bg-card {
     display: grid;
-    grid-template-rows: 1.5fr 1fr;
+    grid-template-rows: 1.25fr 1fr;
   }
 
-  img {
+  .bg-card__img-container {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+  }
+
+  .bg-card__img {
     display: block;
     width: 100%;
     object-position: 0%;
@@ -26,30 +33,60 @@ const { backgroundMobile, backgroundDesktop, heading, copy, fontColor } =
     grid-column: 1 / 2;
   }
 
-  img:last-of-type {
-    display: none;
-  }
-
   .bg-card__text {
     grid-row: 2 /3;
     grid-column: 1 / 2;
     text-align: center;
     justify-self: center;
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: clamp(300px, 50%, 450px);
     opacity: 0.55;
   }
 
-  h4 {
+  .bg-card__heading {
     font-family: "Fraunces", serif;
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 2vw, 3rem);
     font-weight: 900;
-    margin-block: 2rem 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
-  p {
+  .bg-card__copy {
     font-family: "Barlow", sans-serif;
-    font-size: 0.9rem;
-    font-weight: normal;
-    line-height: 1.7;
+    font-size: clamp(0.8rem, 1.1vw, 1.1rem);
+    line-height: 1.6;
+    letter-spacing: -0.4px;
+  }
+
+  @media (max-width: 835px) {
+    .bg-card__text {
+      width: 90%;
+      margin-top: 2rem;
+    }
+
+    .bg-card__heading {
+      font-size: 2rem;
+    }
+
+    .bg-card__copy {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 675px) {
+    .bg-card__text {
+      width: 90%;
+      margin-top: 0;
+      justify-content: center;
+    }
+
+    .bg-card__heading {
+      font-size: clamp(1.5rem, 6.5vw, 6rem);
+    }
+
+    .bg-card__copy {
+      font-size: clamp(0.9rem, 3vw, 2.5rem);
+    }
   }
 </style>
