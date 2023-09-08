@@ -1,15 +1,15 @@
 <footer class="footer">
   <div class="logo"><img src="/logo.svg" alt="" /></div>
   <ul class="footer__links">
-    <li><a href="">About</a></li>
-    <li><a href="">Services</a></li>
-    <li><a href="">Projects</a></li>
+    <li><a class="footer__link" href="">About</a></li>
+    <li><a class="footer__link" href="">Services</a></li>
+    <li><a class="footer__link" href="">Projects</a></li>
   </ul>
   <ul class="footer__links footer__links--social">
-    <li><a href=""><img src="/icons/icon-facebook.svg" alt="" /></a></li>
-    <li><a href=""><img src="/icons/icon-instagram.svg" alt="" /></a></li>
-    <li><a href=""><img src="/icons/icon-twitter.svg" alt="" /></a></li>
-    <li><a href=""><img src="/icons/icon-pinterest.svg" alt="" /></a></li>
+    <li><a class="footer__link footer__link--social" href=""><img src="/icons/icon-facebook.svg" alt="" /></a></li>
+    <li><a class="footer__link footer__link--social" href=""><img src="/icons/icon-instagram.svg" alt="" /></a></li>
+    <li><a class="footer__link footer__link--social" href=""><img src="/icons/icon-twitter.svg" alt="" /></a></li>
+    <li><a class="footer__link footer__link--social" href=""><img src="/icons/icon-pinterest.svg" alt="" /></a></li>
   </ul>
 </footer>
 
@@ -41,7 +41,7 @@
     margin-block: 2rem;
   }
   
-  .footer__links a {
+  .footer__link {
     text-decoration: none;
     font-family: "Barlow", sans-serif;
     font-size: 1.2rem;
@@ -52,5 +52,13 @@
     gap: 1.75rem;
     align-items: center;
     margin-block: 3rem 0;
+  }
+
+  .footer__link:hover {
+    color: var(--color-neutral-5);
+  }
+
+  .footer__link--social:hover {
+    filter: brightness(0) saturate(100%) invert(100%);
   }
 </style>

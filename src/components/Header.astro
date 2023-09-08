@@ -1,20 +1,25 @@
 ---
+
 ---
 
-<header>
-  <a href="/"><img src="/logo.svg" alt="Sunnyside brand logo"></a>
-<nav>
-  <ul>
-    <li><a href="">About</a></li>
-    <li><a href="">Services</a></li>
-    <li><a href="">Projects</a></li>
-    <button><a href="">Contact</a></button>
-  </ul>
-</nav>
+<header class="header">
+  <a class="logo" href="/"><img src="/logo.svg" alt="Sunnyside brand logo" /></a
+  >
+  <nav>
+    <ul class="header__links">
+      <li><a class="header__link" href="">About</a></li>
+      <li><a class="header__link" href="">Services</a></li>
+      <li><a class="header__link" href="">Projects</a></li>
+      <button class="button"
+        ><a class="header__link header__link--button" href="">Contact</a
+        ></button
+      >
+    </ul>
+  </nav>
 </header>
 
 <style>
-  header {
+  .header {
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -22,11 +27,11 @@
     padding: 1rem 2rem;
   }
 
-  img {
+  .logo {
     display: block;
   }
 
-  ul {
+  .header__links {
     list-style: none;
     display: flex;
     gap: 2.5rem;
@@ -34,24 +39,30 @@
     align-items: center;
   }
 
-  li > a,
-  button > a  {
+  .header__link {
     text-decoration: none;
     color: var(--color-neutral-5);
-  }
-
-  li > a {
     font-family: "Barlow", sans-serif;
   }
 
-  button {
-   background-color: var(--color-neutral-5);
-   padding: 1rem 1.75rem;
-   border: none;
-   border-radius: 25px;
+  .button {
+    background-color: var(--color-neutral-5);
+    padding: 1rem 1.75rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 200ms ease-in;
   }
 
-  button > a {
+  .button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button:hover .header__link--button {
+    color: var(--color-neutral-5);
+  }
+
+  .header__link--button {
     font-family: "Fraunces", serif;
     font-weight: 700;
     color: var(--color-neutral-1);

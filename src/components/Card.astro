@@ -5,14 +5,16 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
 
 <div class="card" id={id}>
 
-  <div class="card__img">
-    <img src={backgroundDesktop} alt="" srcset="" />
-    <img src={backgroundMobile} alt="" srcset="" />
+  <div class="card__img-container">
+    <picture>
+      <source media="(max-width: 500px)" srcset={backgroundMobile} sizes="" />
+      <img class="card__img" class="gallery__img" src={backgroundDesktop} alt="" />
+    </picture>
   </div>
   <div class="card__text">
-    <h3>{heading}</h3>
-    <p>{copy}</p>
-    <a href="">{link}</a>
+    <h3 class="card__heading">{heading}</h3>
+    <p class="card__copy">{copy}</p>
+    <a class="card__link" href="">{link}</a>
   </div>
 </div>
 
@@ -27,19 +29,15 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
     grid-row: 1 / 2;
   }
 
-  #transform .card__img {
+  #transform .card__img-container {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
 
-  img {
+  .card__img {
     display: block;
     width: 100%;
     object-position: 0%;
-  }
-
-  img:last-of-type {
-    display: none;
   }
   
   .card__text {
@@ -47,19 +45,19 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
     align-self: center;
   }
 
-  h3,
-  a {
+  .card__heading,
+  .card__link {
     font-family: "Fraunces", serif;
     color: var(--color-neutral-1);
   }
 
-  h3 {
+  .card__heading {
     font-size: clamp(2rem, 3vw, 4rem);
     font-weight: 900;
     margin-block: 0;
   }
 
-  p {
+  .card__copy {
     font-family: "Barlow", sans-serif;
     color: var(--color-neutral-3);
     line-height: 1.5;
@@ -67,7 +65,7 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
     margin-block: 2rem;
   }
 
-  a {
+  .card__link {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 900;
@@ -75,7 +73,7 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
     padding-left: 6px;
   }
 
-  a::after {
+  .card__link::after {
     content: "";
     height: 8px;
     width: calc(100% + 8px);
@@ -85,13 +83,18 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
     left: 0;
     bottom: -1px;
     z-index: -1;
+    transition: all 200ms ease-in;
   }
 
-  #transform a::after  {
+  .card__link:hover.card__link::after {
+    opacity: 1;
+  }
+
+  #transform .card__link::after  {
     background: var(--color-primary-2);
   }
 
-  #standout a::after {
+  #standout .card__link::after {
     background: var(--color-primary-1);
   }
 </style>
