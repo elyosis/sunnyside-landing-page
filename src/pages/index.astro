@@ -6,7 +6,6 @@ import BackgroundCard from "../components/BackgroundCard.astro";
 import TestimonialGroup from "../components/TestimonialGroup.astro";
 import ImageGallery from "../components/ImageGallery.astro";
 
-
 import cardData from "../assets/data/cardItems.json";
 import bgCardData from "../assets/data/bgCardItems.json";
 ---
@@ -54,13 +53,13 @@ import bgCardData from "../assets/data/bgCardItems.json";
   </section>
 
   <section class="section--testimonial">
+    <h3 class="heading--testimonial">Client testimonials</h3>
     <TestimonialGroup />
   </section>
 
   <section>
     <ImageGallery />
   </section>
-
 </Layout>
 
 <style>
@@ -90,10 +89,31 @@ import bgCardData from "../assets/data/bgCardItems.json";
     padding-block: 8rem;
   }
 
+  .heading--testimonial {
+    text-align: center;
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--color-neutral-4);
+    margin-bottom: 5rem;
+  }
+
+  @media (max-width: 835px) {
+    .section--testimonial {
+      padding-block: 2rem 3rem;
+    }
+    .heading--testimonial {
+      letter-spacing: 4px;
+      font-size: clamp(0.9rem, 3vw, 3rem);
+      margin: 2rem 1rem;
+    }
+  }
+
   @media (max-width: 675px) {
     .section--bg-cards {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-  }
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
   }
 </style>
