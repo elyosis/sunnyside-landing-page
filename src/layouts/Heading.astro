@@ -4,26 +4,30 @@ import Header from "../components/Header.astro";
 const { backgroundDesktop, backgroundMobile } = Astro.props;
 ---
 
-<section data-bg-desktop={backgroundDesktop} data-bg-mobile={backgroundMobile}>
+<section>
   <Header />
   <slot />
 </section>
 
-<script>
-  import { setBgVariables } from "../../setBgVariables";
 
-  setBgVariables("section");
-</script>
-
-<style>
+<style define:vars={{backgroundDesktop, backgroundMobile}}>
   section {
     display: grid;
     grid-template-rows: minmax(min-content, auto) 1fr;
     /* fallback value: */
     background: black;
-    background: var(--background-desktop);
+    background: var(--backgroundDesktop);
     background-size: cover;
     background-position: 0%;
     aspect-ratio: 16/9;
+  }
+
+  @media (max-width: 835px) {
+    section {
+      background: var(--backgroundMobile);
+      background-size: cover;
+      background-position: center;
+      aspect-ratio: auto;
+    }
   }
 </style>

@@ -3,9 +3,10 @@
 ---
 
 <header class="header">
-  <a class="logo" href="/"><img src="/logo.svg" alt="Sunnyside brand logo" /></a
+  <a href="/"><img class="logo" src="/logo.svg" alt="Sunnyside brand logo" /></a
   >
   <nav>
+    <img class="header__menu-icon" src="/icons/icon-hamburger.svg" alt="">
     <ul class="header__links">
       <li><a class="header__link" href="">About</a></li>
       <li><a class="header__link" href="">Services</a></li>
@@ -29,6 +30,10 @@
 
   .logo {
     display: block;
+  }
+
+  .header__menu-icon {
+    display: none;
   }
 
   .header__links {
@@ -67,5 +72,20 @@
     font-weight: 700;
     color: var(--color-neutral-1);
     text-transform: uppercase;
+  }
+
+  @media (max-width: 835px) {
+    .header {
+      padding-block: 2rem;
+
+    }
+
+    .header__menu-icon {
+      display: block;
+    }
+
+    .header__links {
+      display: none;
+    }
   }
 </style>
