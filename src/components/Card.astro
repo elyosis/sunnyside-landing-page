@@ -1,9 +1,9 @@
 ---
-const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
+const { backgroundMobile, backgroundDesktop, heading, copy, link, reversed } =
   Astro.props;
 ---
 
-<div class="card" id={id}>
+<div class={`card ${reversed && "card--reversed"}`}>
   <div class="card__img-container">
     <picture>
       <source media="(max-width: 835px)" srcset={backgroundMobile} sizes="" />
@@ -28,12 +28,12 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
     grid-template-columns: repeat(2, 1fr);
   }
 
-  #transform .card__text {
+  .card--reversed .card__text {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
 
-  #transform .card__img-container {
+  .card--reversed .card__img-container {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
@@ -95,12 +95,12 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
     opacity: 1;
   }
 
-  #transform .card__link::after {
-    background: var(--color-primary-2);
+  .card .card__link::after {
+    background: var(--color-primary-1);
   }
 
-  #standout .card__link::after {
-    background: var(--color-primary-1);
+  .card--reversed .card__link::after {
+    background: var(--color-primary-2);
   }
 
   @media (max-width: 835px) {
@@ -120,8 +120,8 @@ const { backgroundMobile, backgroundDesktop, heading, copy, link, id } =
       padding-block: 4rem;
     }
 
-    #transform .card__text,
-    #transform .card__img-container {
+    .card--reversed .card__text,
+    .card--reversed .card__img-container {
       grid-column: auto;
       grid-row: auto;
     }

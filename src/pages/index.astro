@@ -25,14 +25,18 @@ import bgCardData from "../assets/data/bgCardItems.json";
 
   <section>
     {
-      cardData.map((item) => (
+      cardData.map((item, index) => (
+        /* The 'reverse' prop checks if the index is even/odd/0
+          to determine whether the card elements (photo and text)
+          should be shown in normal DOM order or reversed
+          to achieve the final "alternating grid" effect */
         <Card
           backgroundDesktop={item.bg.desktop}
           backgroundMobile={item.bg.mobile}
           heading={item.heading}
           copy={item.copy}
           link={item.link}
-          id={item.id}
+          reversed={index % 2 === 0 ? true : false}
         />
       ))
     }
