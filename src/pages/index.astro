@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Heading from "../layouts/Heading.astro";
+import Hero from "../layouts/Hero.astro";
 import Card from "../components/Card.astro";
 import BackgroundCard from "../components/BackgroundCard.astro";
 import TestimonialGroup from "../components/TestimonialGroup.astro";
@@ -11,17 +11,17 @@ import bgCardData from "../assets/data/bgCardItems.json";
 ---
 
 <Layout title="Sunnyside">
-  <Heading
+  <Hero
     backgroundDesktop="url('src/assets/img/desktop/image-header.jpg')"
     backgroundMobile="url('src/assets/img/mobile/image-header.jpg')"
   >
-    <div class="heading">
-      <h1>We are creatives</h1>
+    <div class="hero__container">
+      <h1 class="heading">We are creatives</h1>
       <div>
         <img src="/icons/icon-arrow-down.svg" alt="" srcset="" />
       </div>
     </div>
-  </Heading>
+  </Hero>
 
   <section>
     {
@@ -63,14 +63,14 @@ import bgCardData from "../assets/data/bgCardItems.json";
 </Layout>
 
 <style>
-  .heading {
+  .hero__container {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     justify-content: center;
     justify-items: center;
   }
 
-  h1 {
+  .heading {
     color: var(--color-neutral-5);
     font-family: "Fraunces", serif;
     font-weight: 900;
@@ -100,7 +100,7 @@ import bgCardData from "../assets/data/bgCardItems.json";
   }
 
   @media (max-width: 835px) {
-    h1 {
+    .heading {
       font-size: 2.5rem;
       letter-spacing: 0.3rem;
     }
