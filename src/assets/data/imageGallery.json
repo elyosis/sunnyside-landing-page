@@ -1,18 +1,18 @@
 [
   {
-    "mobile": "src/assets/img/mobile/image-gallery-milkbottles.jpg",
-    "desktop": "src/assets/img/desktop/image-gallery-milkbottles.jpg"
+    "mobile": "/img/mobile/image-gallery-milkbottles.jpg",
+    "desktop": "/img/desktop/image-gallery-milkbottles.jpg"
   },
   {
-    "mobile": "src/assets/img/mobile/image-gallery-orange.jpg",
-    "desktop": "src/assets/img/desktop/image-gallery-orange.jpg"
+    "mobile": "/img/mobile/image-gallery-orange.jpg",
+    "desktop": "/img/desktop/image-gallery-orange.jpg"
   },
   {
-    "mobile": "src/assets/img/mobile/image-gallery-cone.jpg",
-    "desktop": "src/assets/img/desktop/image-gallery-cone.jpg"
+    "mobile": "/img/mobile/image-gallery-cone.jpg",
+    "desktop": "/img/desktop/image-gallery-cone.jpg"
   },
   {
-    "mobile": "src/assets/img/mobile/image-gallery-sugar-cubes.jpg",
-    "desktop": "src/assets/img/desktop/image-gallery-sugarcubes.jpg"
+    "mobile": "/img/mobile/image-gallery-sugar-cubes.jpg",
+    "desktop": "/img/desktop/image-gallery-sugarcubes.jpg"
   }
 ]
